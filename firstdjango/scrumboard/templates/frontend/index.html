@@ -8,19 +8,18 @@
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="{% static 'frontend/css/scrumboard.css' %}">
       <title>Scrumboard App</title>
   </head>
   <body ng-controller="ScrumboardController">
       {% verbatim %}
       <div class="container">
           <div class="row">
-              <div class="col" ng-repeat="list in data">
-
-                  <h3>id: {{list.id}}</h3>
+              <div class="list col" ng-repeat="list in data">
                   <h3>name: {{list.name}}</h3>
                   <ul>
                       <li ng-repeat="card in list.cards">
-                          <scrumboard-card>{{card.id}} {{card.title}}</scrumboard-card>
+                          <scrumboard-card-directive></scrumboard-card-directive>
                       </li>
                   </ul>
                   <div class="flex">
@@ -35,6 +34,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
       <script src="{% static 'frontend/app.js' %}"></script>
+      <script src="{% static 'frontend/card.directive.js' %}"></script>
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

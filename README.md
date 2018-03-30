@@ -2,7 +2,7 @@
 Try build simple python web application with Django.
 
 ## Prerequisites
-HTML Basic (Angular), JavaScript Basics, Python Basics, Web/HTTP(optional)
+HTML Basic (Angular), JavaScript Basics, Python Basics, Web/HTTP(optional), Bootstrap(optional)
 
 ## Project Note
 Install Python 3 and Create a Virtual Environment. Under root directory, run below commands.
@@ -86,6 +86,37 @@ Creating a Router
 Easily configure URLS for our viewset 
 We simply use SimpleRouter instance 
 All URLs end in a slash!
+```
+
+6. Implement frontend
+Add `templates` directory to hold html page/ welcome page.
+
+Add, `static` to add `.js` files and other `.html` directive files.
+
+Use angular to perform REST Call and power up the page using
+```
+ng-module
+ng-controller
+ng-repeat
+ng-model
+ng-click
+ng-hide, ng-show  //For switch card from view and update
+ng-change, ng-model-options // add debounce within directive for ng-changes
+directive
+$scope
+$http.get, post, put, delete, then
+```
+
+JS notes:
+```$xslt
+splice() adds/removes items to/from an array
+debounce
+```
+Use bootstrap to do some styling. 
+```
+container
+row
+col
 ```
 
 ## Django
