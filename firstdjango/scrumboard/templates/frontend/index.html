@@ -1,0 +1,17 @@
+<!doctype html>
+{% load staticfiles %}
+<html ng-app="Scrumboardemo">
+  <head>
+    <title>Scrumboard App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+    <script src="{% static 'frontend/app.js' %}"></script>
+  </head>
+  <body ng-controller="ScrumboardController">
+      {% verbatim %}
+      <div>
+        ng-repeat, ng model and ng-click go here
+      </div>
+      {% endverbatim %}
+  </body>
+</html>
