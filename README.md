@@ -6,15 +6,16 @@ Install Python 3 and Create a Virtual Environment. Under root directory, run bel
 ```
 python3 -m venv simpledjangoenv
 . simpledjangoenv/bin/activate // go into venv
-Scripts\activate // for windows usage
+Scripts\activate.bat // for windows usage
 deactivate // exit venv
 ```
-Use Visual Studio to open project. Under venv. 
+Use Visual Studio to open project. Under activate venv.
 ```
+python -m pip install --upgrade pip
 pip install django
 django-admin.py startproject firstdjango  //initial a new project
 cd firstdjango
-python manage.py runserver  // run server
+python manage.py runserver  8001// run server, port number is optinal, default 8000
 python manage.py startapp scrumboard
 ```
 
