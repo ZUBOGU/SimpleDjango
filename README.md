@@ -1,6 +1,9 @@
 # SimpleDjango
 Try build simple python web application with Django.
 
+## Prerequisites
+HTML Basic (Angular), JavaScript Basics, Python Basics, Web/HTTP(optional)
+
 ## Project Note
 Install Python 3 and Create a Virtual Environment. Under root directory, run below commands.
 ```
@@ -39,14 +42,14 @@ While add field without a default. Can pick option `1` and type `None`
 
 Can use `http://inloop.github.io/sqlite-viewer/` to open `db.sqlite3`.
 
-3. *Admin Interface*. In `admin.py`, register for the `LIST` and `Card` models.
+3. **Admin Interface** In `admin.py`, register for the `LIST` and `Card` models.
 ```
 python manage.py createsuperuser // create user: root/1234asdf
 http://localhost:8000/admin  // login on UI
 ```
 Then we can create rows for `LIST` and `Card` on UI
 
-4. *REST*
+4. **REST**
 ```
 pip install djangorestframework
 ```
@@ -73,7 +76,7 @@ Match start of url: “scrumboard/”. Rest is matched by urls.py in app.
 Use include() with the name of the url module as a string.
 ```
 
-5. *ModelViewSet*
+5. **ModelViewSet**
 ```
 Support GET, PUT, POST, DELETE 
 Replace ListAPIView
@@ -84,9 +87,6 @@ Easily configure URLS for our viewset
 We simply use SimpleRouter instance 
 All URLs end in a slash!
 ```
-
-## Prerequisites
-HTML Basic (Angular), JavaScript Basics, Python Basics, Web/HTTP(optional)
 
 ## Django
 ```
