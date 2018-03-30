@@ -72,6 +72,18 @@ Match start of url: “scrumboard/”. Rest is matched by urls.py in app.
 Use include() with the name of the url module as a string.
 ```
 
+5. *ModelViewSet*
+```
+Support GET, PUT, POST, DELETE 
+Replace ListAPIView
+Implements a number of views at once
+
+Creating a Router
+Easily configure URLS for our viewset 
+We simply use SimpleRouter instance 
+All URLs end in a slash!
+```
+
 ## Prerequisites
 HTML Basic (Angular), JavaScript Basics, Python Basics, Web/HTTP(optional)
 
