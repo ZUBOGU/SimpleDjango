@@ -49,6 +49,28 @@ Then we can create rows for `LIST` and `Card` on UI
 ```
 pip install djangorestframework
 ```
+In settings.py: add ‘rest_framework’ to `INSTALLED_APPS`. Create `serializers.py`
+```
+Serializers
+Encode Python objects as JSON (JavaScript Object Notation) 
+ModelSerializer autogenerates JSON based on the Model fields
+
+REST API Views
+Will handle requests for data from the client 
+Inherit from generic view classes
+We need lists of objects so we use ListAPIView
+```
+
+```
+Function path() maps views to urls
+First argument is path
+Second argument is the view. For view classes we call .as_view() 
+These URL are relative to the URL for the app
+
+Include the URLs for an app at a specific path
+Match start of url: “scrumboard/”. Rest is matched by urls.py in app. 
+Use include() with the name of the url module as a string.
+```
 
 ## Prerequisites
 HTML Basic (Angular), JavaScript Basics, Python Basics, Web/HTTP(optional)
