@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('scrumboard/', include('scrumboard.urls')),
     path('', TemplateView.as_view(template_name="frontend/index.html")),
+    path('auth_api/', include('auth_api.urls')),
 ]

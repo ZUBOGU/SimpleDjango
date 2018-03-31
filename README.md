@@ -88,7 +88,7 @@ We simply use SimpleRouter instance
 All URLs end in a slash!
 ```
 
-6. Implement frontend
+6.  Implement frontend
 Add `templates` directory to hold html page/ welcome page.
 
 Add, `static` to add `.js` files and other `.html` directive files.
@@ -118,6 +118,8 @@ container
 row
 col
 ```
+
+7. Fix CRSF issue
 
 ## Django
 ```

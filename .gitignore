@@ -4,4 +4,7 @@ simpledjangoenv
 firstdjango/firstdjango/__pycache__
 firstdjango/scrumboard/__pycache__
 firstdjango/scrumboard/migrations/__pycache__
+firstdjango/auth_api/__pycache__/
+firstdjango/auth_api/migrations/__pycache__
 .idea
+SimpleDjango.iml
