@@ -174,6 +174,10 @@ Login and Logout Frontend
 - ng-submit to handle submit button - LoginController
 - Using $location to change path
 ```
+8. Enhancement
+Sorting and Filtering, Moving Cards to Other Lists, An Angular Login Service.
+
+
 
 ## Django
 ```
@@ -199,8 +203,7 @@ View may call Model and/or Template
 JavaScript Web Dev
 Rich Internet Applications
 Client-Side MVC
-```
-```
+
 MVC Architecture
 - Model
 - View

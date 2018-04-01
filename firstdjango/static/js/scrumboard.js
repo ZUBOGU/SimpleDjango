@@ -7,6 +7,10 @@
     function ScrumboardController($scope, $http, $location) {
         // REST GET
         $scope.data = [];
+        $scope.sortBy = 'story_points';
+        $scope.reverse = true;
+        $scope.showFilters = false;
+        
         $http.get('/scrumboard/lists/').then(
             function(response){
                 $scope.data = response.data;
