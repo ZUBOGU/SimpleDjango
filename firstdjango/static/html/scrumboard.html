@@ -26,7 +26,6 @@
                                 <option value="business_value">Business Value</option>
                             </select>
         
-        
                             <input type="checkbox" ng-model="reverse">
                             <label>Reverse</label>
                         </td>
@@ -39,7 +38,7 @@
                 </table>
                 <hr>
             </div>
-            
+
             <ul>
                 <li ng-repeat="card in list.cards | filter:filterBy | orderBy:sortBy:reverse">
                     <scrumboard-card-directive></scrumboard-card-directive>

@@ -10,22 +10,40 @@
             restrict: 'E',
             controller: ['$scope', '$http', function ($scope, $http) {
                 var url = '/scrumboard/cards/' + $scope.card.id + '/';
-
+                $scope.destList = $scope.list;
+                
                 $scope.put = function(){
-                    $http.put(
+                    return $http.put(
                         url,
                         $scope.card
                     );
                 };
 
+                function removeCardFromList(card, list) {
+                    var cards = list.cards;
+                    cards.splice(
+                        cards.indexOf(card),
+                        1
+                    );
+                }
+
                 $scope.delete = function(){
                     $http.delete(url).then(
                         function(){
-                            var cards = $scope.list.cards;
-                            cards.splice(
-                                cards.indexOf($scope.card),
-                                1
-                            );
+                            removeCardFromList($scope.card, $scope.list);
+                        }
+                    );
+                };
+
+                $scope.move = function () {
+                    if ($scope.destList === undefined) {
+                        return;
+                    }
+                    $scope.card.list = $scope.destList.id;
+                    $scope.put().then(
+                        function () {
+                            removeCardFromList($scope.card, $scope.list);
+                            $scope.destList.cards.push($scope.card);
                         }
                     );
                 };
