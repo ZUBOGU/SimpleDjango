@@ -149,11 +149,30 @@ Decorators for Django views: `csrf_protect` and `ensure_csrf_cookie`
 ```
 
 ```
+Toplevel Folders
+In djangular/settings.py
+Setting for templates is a list of dictionaries
+Change ‘DIRS’ to contain top-level templates folder
+Add STATICFILES_DIRS: a tuple containing top-level static folder
+
 Routing
 - Add the ngRoute module
 - Configure URLs and Views
 - home.html for global layout
 - Use ng-view to include views
+
+ngRoute: main HTML file
+When URL changes:
+ngRoute will insert corresponding template inside ng-view tag
+
+ngRoute: Routing Configuration
+when() associates a URL (string) with a route (object)
+A route can have templateURL and controller properties otherwise() redirects to a default URL
+Matches part of URL after # - no page refresh!
+
+Login and Logout Frontend
+- ng-submit to handle submit button - LoginController
+- Using $location to change path
 ```
 
 ## Django

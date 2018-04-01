@@ -2,9 +2,9 @@
     'use strict';
     var app = angular.module('Scrumboardemo', ['ngRoute']);
 
-    app.controller('ScrumboardController', ['$scope', '$http', ScrumboardController]);
+    app.controller('ScrumboardController', ['$scope', '$http', '$location', ScrumboardController]);
 
-    function ScrumboardController($scope, $http) {
+    function ScrumboardController($scope, $http, $location) {
         // REST GET
         $scope.data = [];
         $http.get('/scrumboard/lists/').then(
@@ -27,6 +27,20 @@
                     alert('Could not create card');
                 }
              );
+        };
+
+        // GET LOGOUT
+        $scope.logout = function() {
+            $http.get('/auth_api/logout/')
+                .then(function () {
+                    $location.path('/login/')
+                });
+        };
+
+        // Redirect to login page
+        $scope.login = function(){
+            $location.path('/login/');
         }
+
     }
 })()
