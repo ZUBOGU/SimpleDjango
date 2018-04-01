@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var app = angular.module('Scrumboardemo', []);
+    var app = angular.module('Scrumboardemo', ['ngRoute']);
 
     app.controller('ScrumboardController', ['$scope', '$http', ScrumboardController]);
 

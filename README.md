@@ -119,7 +119,42 @@ row
 col
 ```
 
-7. Fix CRSF issue
+7. Login and Logout, Fix CRSF issue
+```
+python manage.py startapp scrumboard
+```
+Create new app `auth_api` to hold login logout server side code.
+```
+Custom REST Views
+Inherit from `APIView`
+Contains methods for HTTP methods `get`, `post,` ... 
+Return a Response object
+
+Logging the User In
+`authenticate` checks credentials and returns `User` instance or None 
+Use `request.data.get` to retrieve form data
+`login` creates the user login session
+Of course there is also a `logout` method
+
+Restricting ViewSet Permissions
+Add a `permission_classes` attribute to the `ViewSet` 
+Assign a tuple (don’t forget the comma)
+Tuple contains `permissions.IsAuthenticated`
+
+Angular and CSRF Tokens
+New file scrumboard.config.js
+Retrieve module and call `run()` with a function as argument
+We configure both cookie and header name for CSRF token 
+Decorators for Django views: `csrf_protect` and `ensure_csrf_cookie`
+```
+
+```
+Routing
+- Add the ngRoute module
+- Configure URLs and Views
+- home.html for global layout
+- Use ng-view to include views
+```
 
 ## Django
 ```
