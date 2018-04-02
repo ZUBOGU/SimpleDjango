@@ -1,6 +1,7 @@
 # SimpleDjango
 Try build simple python web application with Django.
 
+![HomePage](/images/homepage.png)
 ## Prerequisites
 HTML Basic (Angular), JavaScript Basics, Python Basics, Web/HTTP(optional), Bootstrap(optional)
 
