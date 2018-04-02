@@ -7,13 +7,13 @@
   function config($routeProvider) {
 
     $routeProvider
-        .when('/login', {
-            templateUrl: '/static/html/login.html',
-            controller: 'LoginController',
-        })
         .when('/', {
           templateUrl: '/static/html/scrumboard.html',
           controller: 'ScrumboardController',
+        })
+        .when('/login', {
+            templateUrl: '/static/html/login.html',
+            controller: 'LoginController',
         })
         .otherwise('/');
   }
